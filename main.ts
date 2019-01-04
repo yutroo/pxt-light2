@@ -4,7 +4,7 @@ enum BrightnessEvent {
     //% block="明るい"
     IsBrighter = 2,
     //% block="少し暗い"
-    isDarker = 3,
+    IsDarker = 3,
 }
 
 //% weight=70 icon="\uf0e7" color=#d2691e block="電気の利用"
