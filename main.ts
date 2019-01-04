@@ -1,10 +1,16 @@
 enum BrightnessEvent {
-    //% block="暗い"
+    //% block="すごく暗い"
     IsDark = 1,
-    //% block="明るい"
-    IsBrighter = 2,
+    //% block="暗い"
+    IsDark2 = 2,
     //% block="少し暗い"
-    IsDarker = 3,
+    IsDark3 = 3,
+    //% block="普通"
+    IsNormal = 4,
+    //% block="明るい"
+    IsBright = 5,
+    //% block="すごく明るい"
+    IsBright1 = 6,
 }
 
 //% weight=70 icon="\uf0e7" color=#d2691e block="電気の利用"
@@ -17,17 +23,49 @@ namespace gp {
     export function turnOFF(): void {
         pins.digitalWritePin(DigitalPin.P0, 0)
     }
-    //% blockId=is_dark block="暗い"
+    //% blockId=is_dark block="すごく暗い"
     export function isDark(): boolean {
-        if (input.lightLevel() < 30) {
+        if (input.lightLevel() < 20) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    //% blockId=is_dark2 block="暗い"
+    export function isDark2(): boolean {
+        if (input.lightLevel() < 40) {
             return true;
         } else {
             return false;
         }
     }
     //% blockId=is_darker block="少し暗い"
-    export function isDarker(): boolean {
+    export function isDark3(): boolean {
         if (input.lightLevel() < 60) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    //% blockId=is_normal block="普通"
+    export function isNormal(): boolean {
+        if (input.lightLevel() < 80 ) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    //% blockId=is_bright block="明るい"
+    export function isBright(): boolean {
+        if (input.lightLevel() < 100) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    //% blockId=is_bright2 block="すごく明るい"
+    export function isBright2(): boolean {
+        if (input.lightLevel() > 100) {
             return true;
         } else {
             return false;
@@ -47,4 +85,3 @@ namespace gp {
         }
     }
 }
- 
