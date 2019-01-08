@@ -5,12 +5,12 @@ enum BrightnessEvent {
     IsDark2 = 2,
     //% block="少し暗い"
     IsDark3 = 3,
-    //% block="普通"
-    IsNormal = 4,
+    //% block="少し明るい"
+    IsBright = 4,
     //% block="明るい"
-    IsBright = 5,
+    IsBright1 = 5,
     //% block="すごく明るい"
-    IsBright1 = 6,
+    IsBright2 = 6,
 }
 
 //% weight=70 icon="\uf0e7" color=#d2691e block="電気の利用"
@@ -47,16 +47,16 @@ namespace gp {
             return false;
         }
     }
-    //% blockId=is_normal block="普通"
-    export function isNormal(): boolean {
-        if (input.lightLevel() < 80 ) {
+    //% blockId=is_bright block="少し明るい"
+    export function isBright(): boolean {
+        if (input.lightLevel() < 80) {
             return true;
         } else {
             return false;
         }
     }
     //% blockId=is_bright block="明るい"
-    export function isBright(): boolean {
+    export function isBright2(): boolean {
         if (input.lightLevel() < 100) {
             return true;
         } else {
@@ -64,7 +64,7 @@ namespace gp {
         }
     }
     //% blockId=is_bright2 block="すごく明るい"
-    export function isBright2(): boolean {
+    export function isBright3(): boolean {
         if (input.lightLevel() > 100) {
             return true;
         } else {
