@@ -8,9 +8,9 @@ enum BrightnessEvent {
     //% block="少し明るい"
     IsBright = 4,
     //% block="明るい"
-    IsBright1 = 5,
+    IsBright2 = 5,
     //% block="すごく明るい"
-    IsBright2 = 6,
+    IsBright3 = 6,
 }
 
 //% weight=70 icon="\uf0e7" color=#d2691e block="電気の利用"
