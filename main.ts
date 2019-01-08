@@ -39,7 +39,7 @@ namespace gp {
             return false;
         }
     }
-    //% blockId=is_darker block="少し暗い"
+    //% blockId=is_dark3 block="少し暗い"
     export function isDark3(): boolean {
         if (input.lightLevel() < 60) {
             return true;
@@ -55,7 +55,7 @@ namespace gp {
             return false;
         }
     }
-    //% blockId=is_bright block="明るい"
+    //% blockId=is_bright2 block="明るい"
     export function isBright2(): boolean {
         if (input.lightLevel() < 100) {
             return true;
@@ -63,7 +63,7 @@ namespace gp {
             return false;
         }
     }
-    //% blockId=is_bright2 block="すごく明るい"
+    //% blockId=is_bright3 block="すごく明るい"
     export function isBright3(): boolean {
         if (input.lightLevel() > 100) {
             return true;
